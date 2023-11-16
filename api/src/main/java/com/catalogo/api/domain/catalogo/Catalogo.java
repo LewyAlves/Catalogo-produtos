@@ -28,4 +28,16 @@ public class Catalogo {
         this.descricao = dados.descricao();
         this.preco = dados.preco();
     }
+
+    public void atualizaDados(atualizaDadosProduto dadosDoProduto) {
+        if (dadosDoProduto.produto() != null){
+            this.produto = dadosDoProduto.produto();
+        }
+        if (dadosDoProduto.descricao() != null){
+            this.descricao = dadosDoProduto.descricao();
+        }
+        if (dadosDoProduto.preco() != null){
+            this.preco = dadosDoProduto.preco();
+        }
+    }
 }

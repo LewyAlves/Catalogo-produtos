@@ -4,7 +4,6 @@ package com.catalogo.api.domain.catalogo;
 public enum secao {
     Bebidas,
     Mercearia,
-    Limpeza,
     Congelados,
-
+    Limpeza
 }
