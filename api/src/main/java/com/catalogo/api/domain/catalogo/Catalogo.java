@@ -6,8 +6,8 @@ import lombok.EqualsAndHashCode;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
-@Table(name = "Produtos")
-@Entity(name = "Produto")
+@Table(name = "Catalogo")
+@Entity(name = "Catalogo")
 @Getter
 @NoArgsConstructor
 @AllArgsConstructor
@@ -16,13 +16,14 @@ public class Catalogo {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String nomeProduto;
+    private String produto;
+    @Enumerated(EnumType.STRING)
     private secao secao;
     private String descricao;
     private Double preco;
 
     public Catalogo(DadosProdutos dados){
-        this.nomeProduto = dados.nomeProduto();
+        this.produto = dados.produto();
         this.secao = dados.secao();
         this.descricao = dados.descricao();
         this.preco = dados.preco();

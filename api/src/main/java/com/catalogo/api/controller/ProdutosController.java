@@ -30,7 +30,7 @@ public class ProdutosController {
     @Transactional
     public ResponseEntity cadastraProduto(@RequestBody @Valid DadosProdutos dados){
         var produtos = (new Catalogo(dados));
-        var repositorio = repository.save(produtos);
-        return ResponseEntity.ok(produtos);
+        var produtoSalvo = repository.save(produtos);
+        return ResponseEntity.ok(produtoSalvo);
     }
 }
