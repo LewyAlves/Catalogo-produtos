@@ -1,5 +1,5 @@
  <div align="center">
-<img src ="https://github.com/LewyAlves/Catalogo-produtos/assets/122696078/6db87a73-b138-4087-950a-4b587040a436" width="350px"/>
+<img src ="https://github.com/LewyAlves/Catalogo-produtos/assets/122696078/5748ce24-9d42-49dc-9ff1-55af16ab3e5e" width="350px"/>
 </div>
 
 ## Catálogo de produtos com spring boot
