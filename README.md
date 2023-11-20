@@ -1,11 +1,12 @@
-## ![Logo do projeto]( logo-oficial.jpg){:width="300px"}
+ <div align="center">
+<img src ="https://github.com/LewyAlves/Catalogo-produtos/assets/122696078/6db87a73-b138-4087-950a-4b587040a436" width="350px"/>
+</div>
 
-Catálogo de produtos com spring boot
-
-Este é um projeto Spring Boot básico configurado para utilizar Java 17 como versão do JDK e o IntelliJ IDEA como editor de código fonte.
+## Catálogo de produtos com spring boot
+Este é um projeto Spring Boot básico utilizando Java 17 como versão do JDK, o IntelliJ IDEA como editor de código fonte e o MySQL como banco de dados.
 
 ## Objetivo
-API REST desenvolvida para consultas de produtos de supermercado, sendo, a consulta e lista de produtos no catálogo livre ao público. Cadastros, apagamento e atualização de produtos sendo restrito apenas
+API REST desenvolvida para consultas de produtos de supermercado, sendo, a consulta e lista de produtos no catálogo livre ao público. Cadastros, cancelamento e atualização de produtos sendo restrito apenas
 a funcionários cadastrados no sistema.
 
 ## Pré-requisitos
