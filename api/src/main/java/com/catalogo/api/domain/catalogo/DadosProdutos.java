@@ -6,11 +6,11 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosProdutos(
-        @NotNull
+        @NotBlank(message = "O nome do produto precisa ser informado")
         String produto,
-        @NotNull
+        @NotNull(message = "o campo seção é obrigatorio")
         secao secao,
-        @NotNull
+        @NotNull(message = "descrição do produto obrigatorio")
         String descricao,
         @NotNull
         @DecimalMin(value = "0.1")

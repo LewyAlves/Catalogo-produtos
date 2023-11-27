@@ -31,7 +31,7 @@ public class ProdutosController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<DadosDeListaCatalogo>> lista(@PageableDefault(sort = {"secao"}) Pageable paginacao){
+    public ResponseEntity<Page<DadosDeListaCatalogo>> lista(@PageableDefault(sort = {"secao"}, size = Integer.MAX_VALUE) Pageable paginacao){
         var page = repository.findAll(paginacao).map(DadosDeListaCatalogo::new);
         return ResponseEntity.ok(page);
     }
