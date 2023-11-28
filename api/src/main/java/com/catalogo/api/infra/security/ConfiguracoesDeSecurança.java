@@ -28,8 +28,8 @@ public class ConfiguracoesDeSecurança {
                 .sessionManagement(sm -> sm.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests(req -> {
                     req.requestMatchers(HttpMethod.POST, "/autorizacao").permitAll();
-                    req.requestMatchers(HttpMethod.GET, "/catalogo").permitAll();
-                    req.requestMatchers(HttpMethod.GET, "/catalogo/buscar").permitAll();
+                    req.requestMatchers(HttpMethod.GET, "/catalogo", "/catalogo/buscar").permitAll();
+                    req.requestMatchers("/v3/api-docs/**", "/swagger-ui.html", "/swagger-ui/**").permitAll();
                     req.anyRequest().authenticated();
                 }).addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();
