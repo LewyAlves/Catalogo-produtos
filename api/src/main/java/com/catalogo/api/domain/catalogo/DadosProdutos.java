@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 
 public record DadosProdutos(
-        @NotBlank(message = "O nome do produto precisa ser informado")
+        @NotNull(message = "O nome do produto precisa ser informado")
         String produto,
         @NotNull(message = "o campo seção é obrigatorio")
         secao secao,
