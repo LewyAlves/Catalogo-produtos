@@ -55,6 +55,16 @@ class ProdutosControllerTest {
     }
 
     @Test
+    @DisplayName("Atualizando produto existindo um erro")
+    void atualizaProdutoEmCamposNulos() throws Exception {
+        mvc.perform(MockMvcRequestBuilders
+                .put("/catalogo")
+                .contentType(MediaType.APPLICATION_JSON)
+                .content("{\"id\": \"7\", \"produto\": , \"descricao\": \"testando atualização do sorvete flocos sem passar o nome do produto\"}"))
+                .andExpect(MockMvcResultMatchers.status().isBadRequest());
+    }
+
+    @Test
     @DisplayName("Lista produtos")
     void listaProdutos() throws Exception {
         mvc.perform(MockMvcRequestBuilders
