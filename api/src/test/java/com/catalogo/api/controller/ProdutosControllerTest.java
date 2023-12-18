@@ -5,17 +5,12 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.security.test.context.support.WithMockUser;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.*;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
 
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -46,7 +41,7 @@ class ProdutosControllerTest {
 
     @Test
     @DisplayName("Atualizando produto com sucesso")
-    void atualizaProduto() throws Exception {
+    void atualizaProdutoCenario01() throws Exception {
         mvc.perform(MockMvcRequestBuilders
                 .put("/catalogo")
                 .contentType(MediaType.APPLICATION_JSON)
@@ -56,7 +51,7 @@ class ProdutosControllerTest {
 
     @Test
     @DisplayName("Atualizando produto existindo um erro")
-    void atualizaProdutoEmCamposNulos() throws Exception {
+    void atualizaProdutoCenario02() throws Exception {
         mvc.perform(MockMvcRequestBuilders
                 .put("/catalogo")
                 .contentType(MediaType.APPLICATION_JSON)
